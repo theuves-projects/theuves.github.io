@@ -3,48 +3,79 @@
     <meta charset="utf-8">
     <title>@theuves</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+      }
       html {
         font-size: 18px;
       }
       body {
         font-family: courier;
-        background-size: 40%;
-        background-image: url(./bg.jpg);
-        background-repeat: no-repeat;
-        background-position: bottom right 25%;
-        white-space: nowrap;
       }
       .container {
-        position: fixed;
+        width: 850px;
+        max-width: 850px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        background-size: 65%;
+        background-image: url(./bg.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        white-space: nowrap;
+      }
+      .items {
+        position: absolute;
         bottom: 10%;
-        left: 12.5%;
+        left: 0;
       }
       .title {
+        margin-bottom: 10px;
         font-size: 2.15rem;
         font-family: Courier, monospace;
         text-decoration: underline;
         text-decoration-color: darkred;
       }
-      .links {font-size: 1.15rem;}
-      .links a {color: darkblue;}
-      .links a:hover {color: #666;}
-      .links a:active {color: darkred;}
-      ::selection {background-color: yellow;}
+      .links {
+        padding-left: 40px;
+        font-size: 1.15rem;
+      }
+      .links li {
+        line-height: 1.35;
+      }
+      .links a {
+        color: darkblue;
+      }
+      .links a:hover {
+        color: #333;
+      }
+      .links a:active {
+        color: darkred;
+      }
+      ::selection {
+        background-color: yellow;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1 class="title">@theuves</h1>
-      <ul class="links">
-        <li><a href="https://github.com/search?q=user:theuves">Códigos</a></li>
-        <li><a href="https://theuves.deviantart.com/gallery/">Arte</a></li>
-        <li>-</li>
-        <li><a href="https://piii.js.org/">Piii.js</a></li>
-        <li><a href="https://extenso.js.org/">Extenso.js</a></li>
-        <li><a href="https://github.com/theuves/conjugador">Conjugador.js</a></li>
-        <li><a href="https://bloco.surge.sh/">Bloco</a></li>
-        <li><a href="https://cebolinhaipsum.surge.sh/">Cebolinha Ipsum</a></li>
-      </ul>
+      <div class="items">
+        <h1 class="title">@theuves</h1>
+        <ul class="links">
+          <li><a href="https://github.com/search?q=user:theuves">Códigos</a></li>
+          <li><a href="https://theuves.deviantart.com/gallery/">Arte</a></li>
+          <li><a href="https://piii.js.org/">Piii.js</a></li>
+          <li><a href="https://extenso.js.org/">Extenso.js</a></li>
+          <li><a href="https://github.com/theuves/conjugador">Conjugador.js</a></li>
+          <li><a href="https://bloco.surge.sh/">Bloco</a></li>
+          <li><a href="https://cebolinhaipsum.surge.sh/">Cebolinha Ipsum</a></li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
