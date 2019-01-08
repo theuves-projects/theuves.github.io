@@ -1,6 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>@theuves</title>
     <style>
       * {
@@ -11,10 +12,8 @@
       body {
         height: 100%;
       }
-      html {
-        font-size: 18px;
-      }
       body {
+        font-size: 18px;
         font-family: monospace;
       }
       .container {
@@ -29,7 +28,7 @@
         background-position: bottom right;
         white-space: nowrap;
       }
-      .items {
+      .content {
         position: absolute;
         bottom: 10%;
         left: 0;
@@ -39,25 +38,29 @@
         font-size: 2.15rem;
         font-family: monospace;
       }
-      .links {
+      .projects {
         padding-left: 10px;
-        font-size: 1.15rem;
+        font-size: 1.3rem;
       }
-      .links li {
-        line-height: 1.5;
+      .project-item {
+        line-height: 180%;
         list-style-type: none;
       }
-      .links a {
+      .project-link {
         color: #111;
         text-decoration: none;
       }
-      .links a:hover {
+      .project-link:hover {
         color: white;
         background-color: black;
         transition: all .075s;
       }
-      .links a:active {
+      .project-link:active {
         background-color: gray;
+      }
+      .project-year {
+        color: gray;
+        font-style: italic;
       }
       ::selection {
         background-color: #ddd;
@@ -66,17 +69,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="items">
+      <div class="content">
         <h1 class="title">@theuves</h1>
-        <ul class="links">
-          <li><a href="https://github.com/search?q=user:theuves+user:piiijs+user:joguinhos+user:sevueht">Projetos</a></li>
-          <li><a href="https://theuves.deviantart.com/gallery/">Rabiscos</a></li>
-          <li><a href="https://velha.theuves.com/">Velha</a></li>
-          <li><a href="https://piii.js.org/">Piii.js</a></li>
-          <li><a href="https://extenso.js.org/">Extenso.js</a></li>
-          <li><a href="https://github.com/theuves/conjugador">Conjugador.js</a></li>
-          <li><a href="https://bloco.surge.sh/">Bloco</a></li>
-          <li><a href="https://cebolinhaipsum.surge.sh/">Cebolinha Ipsum</a></li>
+        <ul class="projects">
+          <li class="project-item">
+            <a class="project-link" href="https://github.com/piiijs/piii.js">Piii.js</a>
+            <span class="project-year">2016-18</span>
+          </li>
+          <li class="project-item">
+            <a class="project-link" href="https://extenso.js.org/">Extenso.js</a>
+            <span class="project-year">2015-19</span>
+          </li>
+          <li class="project-item">
+            <a class="project-link" href="https://theuves.com/cebolinha-ipsum">Cebolinha Ipsum</a>
+            <span class="project-year">2018</span>
+          </li>
+          <li class="project-item">
+            <a class="project-link" href="https://github.com/theuves/cpf">CPF</a>
+            <span class="project-year">2015-19</span>
+          </li>
+          <li class="project-item">
+            <a class="project-link" href="https://github.com/theuves/dicio">Dicio</a>
+            <span class="project-year">2015-19</span>
+          </li>
+          <li class="project-item">
+            <a class="project-link" href="https://github.com/theuves/conjugador.js">Conjugador.js</a>
+            <span class="project-year">2016-19</span>
+          </li>
         </ul>
       </div>
     </div>
