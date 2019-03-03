@@ -11,7 +11,7 @@ function getImages() {
 
   for (dir of fs.readdirSync('./src/images')) {
     for (filename of fs.readdirSync(`./src/images/${dir}`)) {
-      list = list.concat(`./src/images/${dir}/${filename}`)
+      list = list.concat(`./images/${dir}/${filename}`)
     }
   }
 
