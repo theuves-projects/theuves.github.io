@@ -1,0 +1,161 @@
+body {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+}
+
+/* Geral
+ ============================================================================*/
+
+.container {
+  max-width: 680px;
+  margin-bottom: 100px;
+}
+@media (max-width: 680px) {
+  .container {
+    margin-bottom: 30px;
+  }
+}
+
+/* Nav
+ ============================================================================*/
+
+.navbar {
+  padding: 10px 0;
+  margin-bottom: 30px;
+  border-bottom: solid 1px black;
+  background-color: white !important;
+}
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* Página inicial
+ ============================================================================*/
+
+/*
+ * Imagens
+ */
+.images {
+  position: relative;
+  margin-bottom: 30px;
+  height: 200px;
+  background-color: #ddd;
+}
+.img {
+  --m: calc((100% - 200px) / 5);
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  filter: grayscale(1);
+  transition: filter .15s linear;
+}
+.img:hover {
+  filter: none !important;
+  z-index: 1;
+}
+.images:hover .img:nth-child(6) {
+  filter: grayscale(1);
+}
+.img:nth-child(1) {
+  right: 0;
+  background-image: url(/images/apresentation/1.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+.img:nth-child(2) {
+  right: var(--m);
+  background-image: url(/images/apresentation/2.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+.img:nth-child(3) {
+  right: calc(2 * var(--m));
+  background-image: url(/images/apresentation/3.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+.img:nth-child(4) {
+  right: calc(3 * var(--m));
+  background-image: url(/images/apresentation/4.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+.img:nth-child(5) {
+  right: calc(4 * var(--m));
+  background-image: url(/images/apresentation/5.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+.img:nth-child(6) {
+  right: calc(5 * var(--m));
+  filter: none;
+  background-image: url(/images/apresentation/6.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+
+/*
+ * Texto
+ */
+.article {
+  font-size: 1.15em;
+  line-height: 180%;
+  text-indent: 1.5em;
+}
+
+/* Cards
+ ============================================================================*/
+
+/*
+ * For all
+ */
+.card {
+  margin: 0;
+  font-size: 18px;
+}
+.card:not(:last-child) {
+  margin-bottom: 30px;
+}
+.card-title {
+  font-weight: bold;
+}
+.card-subtitle {
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-style: italic;
+  color: gray;
+}
+
+/*
+ * Badge
+ */
+.badge {
+  font-weight: lighter;
+  background-color: #111;
+}
+.badge:not(:last-child) {
+  margin-right: 5px;
+}
+@media (max-width: 680px) {
+  .badge {
+    font-size: 12px;
+  }
+}
+
+/*
+ * Portfolio
+ * ---------
+ */
+#portfolio .card-body ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/*
+ * Article
+ * -------
+ */
+#article .card-img-top {
+  height: 225px;
+  background-size: cover;
+}

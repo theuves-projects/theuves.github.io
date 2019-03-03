@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="pt-BR"> <%- include('_includes/head.ejs', { title: 'Portfólio' }) %> <body><div class="container"> <%- include('_includes/nav.ejs') %> <main id="portfolio"> <%-
+          include('_includes/cards-portfolio.ejs', {
+            projects: [
+
+              // Piii.js.org
+              //===============================================================
+              {
+                screenshot: 'images/screenshots/piii_js.png',
+                title: 'Piii.js',
+                type: 'website',
+                text: 'Um site simples com a apresentação da biblioteca <a href="https://github.com/piiijs/piii.js">Piii.js</a>, além de hospedar toda a sua documentação. Nele há um exemplo de uso da aplicação bem interessante com um chat que filtra filtra os palavrões enviados.',
+                links: {
+                  url: 'https://piii.js.org',
+                  sourceCode: 'https://github.com/piiijs/piii.js.org'
+                },
+                tags: [
+                  'React.js',
+                  'Gatsby',
+                  'styled-components',
+                  'webpack'
+                ]
+              },
+
+              // Extenso.js.org
+              //===============================================================
+              {
+                screenshot: 'images/screenshots/extenso_js.png',
+                title: 'Extenso.js.org',
+                type: 'website',
+                text: 'Uma landing page para o a biblioteca <a href="https://github.com/theuves/extenso.js">Extenso.js</a>; ele apenas faz a apresentação da ferramenta, mostra alguns exemplos e redireciona o usuário para a documentação.',
+                links: {
+                  url: 'https://extenso.js.org',
+                  sourceCode: 'https://github.com/theuves/extenso.js.org'
+                },
+                tags: [
+                  'Bootstrap',
+                  'EJS',
+                  'SASS',
+                  'Gulp'
+                ]
+              },
+
+              // Assis
+              //===============================================================
+              {
+                screenshot: 'images/screenshots/assis.png',
+                title: 'Assis',
+                type: 'website',
+                text: 'Uma serviço para ler os principais romances do escritor brasileiro <a href="https://pt.wikipedia.org/wiki/Machado_de_Assis">Machado de Assis</a>. O site permite que usuário se cadastre e faça login. Desse modo ele tem várias configurações dispníveis, além da facilidade de alternação de leitura entre o computador e o celular, pois o site memoriza o último capítulo lido.',
+                links: {
+                  url: 'https://assis.netlify.com',
+                  sourceCode: 'https://github.com/theuves/assis'
+                },
+                tags: [
+                  'React.js',
+                  'Firebase',
+                  'webpack',
+                  'Netlify'
+                ]
+              },
+
+              // Cebolinha Ipsum
+              //===============================================================
+              {
+                screenshot: 'images/screenshots/cebolinha_ipsum.png',
+                title: 'Cebolinha Ipsum',
+                type: 'website',
+                text: 'Diante de uma série de projetos que personalizam o famoso "lorem ipsum", como o projeto <a href="http://compadreipsum.com.br/">Compadre Ipsum</a>, <a href="http://www.dilmesipsum.com.br/">Dilmês Ipsum</a> e <a href="http://mussumipsum.com/">Mussum Ipsum</a>, eu resolvi, pois, criar o <b>Cebolinha Ipsum</b>, que basicamente gera um "lorem ipsum" com o estilo de fala do personagem Cebolinha da <a href="https://pt.wikipedia.org/wiki/Turma_da_M%C3%B4nica">Turma da Mônica</a>. O site oferece mais informações sobre isso.',
+                links: {
+                  url: 'https://theuves.github.io/cebolinha-ipsum',
+                  sourceCode: 'https://github.com/theuves/cebolinha-ipsum'
+                },
+                tags: [
+                  'EJS',
+                  'jQuery',
+                  'SASS',
+                  'Gulp'
+                ]
+              },
+
+              // Velha
+              //===============================================================
+              {
+                screenshot: 'images/screenshots/velha.png',
+                title: 'Velha',
+                type: 'website',
+                text: 'Esse é um simples jogo da velha (tic-tac-toe em inglês) para jogar contra uma inteligência artificial. O site oferece opções para o jogador escolher com qual jogador ele vai jogar, além de ter uma série de animações que deixa a aplicação mais interessante.',
+                links: {
+                  url: 'https://theuves.github.io/velha',
+                  sourceCode: 'https://github.com/theuves/velha'
+                },
+                tags: [
+                  'React.js',
+                  'styled-components',
+                  'webpack'
+                ]
+              },
+
+              // Piii.js
+              //===============================================================
+              {
+                screenshot: false,
+                title: 'Piii.js',
+                type: 'biblioteca',
+                text: 'Uma biblioteca JavaScript altamente configurável para a construção de filtros de palavrões (palavras de baixo-calão) com vários métodos que evitam o usuário burlá-los.',
+                links: {
+                  url: 'https://npmjs.com/piii',
+                  sourceCode: 'https://github.com/piiijs/piii.js'
+                },
+                tags: [
+                  'JavaScript',
+                  'Jasmine',
+                  'webpack'
+                ]
+              },
+
+              // Pluralizador.js
+              //===============================================================
+              {
+                screenshot: false,
+                title: 'Pluralizador.js',
+                type: 'biblioteca',
+                text: 'Um módulo JavaScript simples que faz a pluralização de substantivos da língua portuguesa, seguindo as principais regras gramáticas de pluralização.',
+                links: {
+                  url: 'https://npmjs.com/pluralizador',
+                  sourceCode: 'https://github.com/theuves/pluralizador.js'
+                },
+                tags: [
+                  'JavaScript'
+                ]
+              },
+
+              // Extenso.js
+              //===============================================================
+              {
+                screenshot: false,
+                title: 'Extenso.js',
+                type: 'biblioteca',
+                date: {
+                  from: '29 nov. 2015',
+                  to: 'Hoje'
+                },
+                text: 'Uma biblioteca avançada para a escrita de números por extenso da língua portugesa. Ele escreve números até duodecilhões, números negativos e decimais, além de ser possível a configuração de dialetos, gêneros, e valores monetários (como Reais, Euros e Escudos).',
+                links: {
+                  url: 'https://npmjs.com/extenso',
+                  sourceCode: 'https://github.com/theuves/extenso.js'
+                },
+                tags: [
+                  'JavaScript',
+                  'AVA',
+                  'webpack'
+                ]
+              },
+
+              // Dicio
+              //===============================================================
+              {
+                screenshot: false,
+                title: 'Dicio',
+                date: {
+                  from: '16 ago. 2015',
+                  to: 'Hoje'
+                },
+                type: 'ferramenta',
+                text: 'Uma ferramenta para ser usada na linha de comando que faz a extração de informações de uma determidada palavras na internet retornando-as ao usuário.',
+                links: {
+                  url: 'https://github.com/theuves/dicio',
+                  sourceCode: 'https://github.com/theuves/dicio'
+                },
+                tags: [
+                  'JavaScript'
+                ]
+              },
+
+              // CPF
+              //===============================================================
+              {
+                screenshot: false,
+                title: 'CPF',
+                type: 'biblioteca',
+                date: {
+                  from: '27 dez. 2015',
+                  to: 'Hoje'
+                },
+                text: 'Uma simples biblioteca JavaScript usada para a manipulação de números de CPF, permitindo que o desenvolvedor formatar, validar e gerar números de CPF. Usado por organizações como <a href="https://automattic.com">Automattic</a>, <a href="http://techparty.faccat.br">Bit Capital</a> e <a href="https://github.com/bitcapital-hq">TechParty</a>.',
+                links: {
+                  url: 'https://github.com/theuves/cpf',
+                  sourceCode: 'https://github.com/theuves/cpf'
+                },
+                tags: [
+                  'JavaScript',
+                  'Jasmine',
+                  'webpack'
+                ]
+              },
+
+              // Conjugador
+              //===============================================================
+              {
+                screenshot: false,
+                title: 'Conjugador',
+                type: 'biblioteca',
+                date: {
+                  from: '03 jul. 2016',
+                  to: 'Hoje'
+                },
+                text: 'Uma biblioteca simples para fazer a conjugação de verbos da língua portuguesa, sem a necessidada de conexão com a internet. Ela faz a conjugação de verbos regulares e irregulares nos seis tempos do modo indicativo.',
+                links: {
+                  url: 'https://npmjs.com/conjugador',
+                  sourceCode: 'https://github.com/theuves/conjugador'
+                },
+                tags: [
+                  'JavaScript',
+                  'Jasmine',
+                  'webpack'
+                ]
+              }
+            ]
+          })
+        %> </main></div> <%- include('_includes/scripts.ejs') %> </body></html>
