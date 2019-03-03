@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <%- include('_includes/head.ejs', { title: 'Artigos' }) %>
+
+  <body>
+    <div class="container">
+      <%- include('_includes/nav.ejs') %>
+
+      <main id="article">
+        <%-
+          include('_includes/cards-article.ejs', {
+            articles: [
+
+              // Números grandes em JavaScript com BigInt
+              //===============================================================
+              {
+                image: '/images/articles/2018_12_16.jpg',
+                title: 'Números grandes em JavaScript com BigInt',
+                date: '16/12/2018',
+                site: 'Tableless',
+                description: 'Certa vez, quando comecei estudar JavaScript, decidi criar uma ferramenta para escrever números por extenso na língua portuguesa. Tal ferramenta deveria escrever valores...',
+                link: 'https://tableless.com.br/numeros-grandes-em-javascript-com-bigint/',
+                tags: [
+                  'JavaScript',
+                  'BigInt',
+                  'Tableless'
+                ]
+              },
+
+              // Arredondando números com JavaScript
+              //===============================================================
+              {
+                image: '/images/articles/2018_12_17.jpg',
+                title: 'Arredondando números com JavaScript',
+                date: '17/12/2018',
+                site: 'Medium',
+                description: 'O objeto Math do JavaScript possui vários métodos que permitem fazer a conversão de números decimais, como o floor, o ceil e o round. Logo de cara, observa-se que todos...',
+                link: 'https://medium.com/@theuves/arredondando-n%C3%BAmeros-com-javascript-89c8fb4ea60c',
+                tags: [
+                  'JavaScript',
+                  'Number',
+                  'Medium'
+                ]
+              },
+
+              // Largura e altura exatas no CSS
+              //===============================================================
+              {
+                image: '/images/articles/2018_12_23.jpg',
+                title: 'Largura e altura exatas no CSS',
+                date: '23/12/2018',
+                site: 'Medium',
+                description: 'O valor da propriedade width que você definiu não é a largura do seu elemento. O valor da propriedade height que você definiu não é a altura do seu elemento. Estranho...',
+                link: 'https://medium.com/@theuves/largura-e-altura-exata-no-css-cb2c3e5262f9',
+                tags: [
+                  'CSS',
+                  'box-sizing',
+                  'Medium'
+                ]
+              },
+
+              // Um pouco sobre CSS Grid Layout
+              //===============================================================
+              {
+                image: '/images/articles/2019_01_19.jpg',
+                title: 'Um pouco sobre CSS Grid Layout',
+                date: '19/01/2018',
+                site: 'Tableless',
+                description: 'O CSS Grid Layout é uma tecnologia do CSS que desde 2017 está presente na maioria dos principais navegadores modernos. Ela nos permite criar layouts baseados em grids de...',
+                link: 'https://tableless.com.br/um-pouco-sobre-css-grid-layout/',
+                tags: [
+                  'CSS',
+                  'CSS Grid Layout',
+                  'Tableless'
+                ]
+              }
+            ]
+          })
+        %>
+      </main>
+    </div>
+
+    <%- include('_includes/scripts.ejs') %>
+  </body>
+</html>

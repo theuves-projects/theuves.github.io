@@ -1,0 +1,50 @@
+<!--
+//
+// Dados recebidos:
+// ================
+//
+// * articles[] - Array de objetos com dados info. de cada projeto.
+//
+// Descrição de um objeto da array:
+// ================================
+//
+// * image - Endereço da imagem de apresentação do artigo.
+// * title - Título do artigo.
+// * date - Data de publicação do artigo: DD/MM/AAAA.
+// * site - Site que o artigo foi publicado.
+// * description - Descrição rápida do artigo.
+// * link - Link para o artigo.
+// * tags[] - Lista de etiquetas do artigo (em string).
+//
+//-->
+
+<% articles.reverse().forEach((article) => { %>
+  <div class="card">
+    <% if (article.image) { %>
+      <div style="background-image: url(<%= article.image %>);" class="card-img-top"></div>
+    <% } %>
+    <div class="card-body">
+      <hgroup>
+        <h2 class="card-title"><%= article.title %></h2>
+        <h3 class="card-subtitle">
+          Publicado no <%= article.site %> em <time><%= article.date %></time>
+        </h3>
+      </hgroup>
+      <p class="card-text">
+        <%- article.description %>
+      </p>
+      <p>
+        <a href="<%- article.link %>">
+          Leia o texto completo.
+        </a>
+      </p>
+    </div>
+    <div class="card-footer">
+      <% article.tags.forEach((tag) => { %>
+        <div class="badge badge-dark">
+          <%= tag %>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+<% }) %>
