@@ -125,6 +125,9 @@ body {
   font-style: italic;
   color: gray;
 }
+.card-text {
+  line-height: 180%;
+}
 
 /*
  * Badge
