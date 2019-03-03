@@ -1,21 +1,13 @@
 {
   "name": "theuves.github.io",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Meu site pessoal.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf ./dist/ && gulp build && cp ./CNAME ./dist/",
+    "deploy": "node deploy.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/theuves/theuves.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/theuves/theuves.github.io/issues"
-  },
-  "homepage": "https://github.com/theuves/theuves.github.io#readme",
+  "author": "Matheus Alves",
+  "license": "MIT",
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "gulp": "^4.0.0",
