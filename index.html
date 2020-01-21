@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>matheus alves | @theuves</title>
+    <style type="text/css">
+        * {
+            --primary-color: #009688;
+            padding: 0;
+            margin: 0;
+            line-height: 100%;
+        }
+        *::selection {
+            color: black;
+            background-color: #bbb;
+        }
+        html {
+            font-size: 16px;
+        }
+        body {
+            font-family: 'Roboto Mono', Consolas, monospace;
+        }
+        .main {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            text-align: center;
+        }
+        .pic,
+        .name,
+        .title {
+            margin-bottom: 20px;
+        }
+        .pic {
+            border-radius: 100%;
+            width: 100px;
+        }
+        .title {
+            font-style: italic;
+            color: gray;
+        }
+        .list {
+            display: inline;
+            list-style: none;
+        }
+        .list-item {
+            display: inline;
+        }
+        .link {
+            color: var(--primary-color);
+        }
+            .link:hover {
+                color: white;
+                background-color: var(--primary-color);
+                text-decoration: none;
+            }
+            .link:active {
+                filter: brightness(115%);
+            }
+        @media only screen and (max-width: 400px) {
+          html {
+            font-size: 14px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <img class="pic" src="./me.jpg" />
+        <h1 class="name">matheus alves</h1>
+        <p class="title">programador javascript</p>
+        <ul class="list">
+            <li class="list-item">
+                <a class="link" href="https://github.com/theuves">github</a>
+            </li>
+            <li class="list-item">
+                <a class="link" href="https://twitter.com/theuves">twitter</a>
+            </li>
+            <li class="list-item">
+                <a class="link" href="https://br.linkedin.com/in/theuves">linkedin</a>
+            </li>
+            <li class="list-item">
+                <a class="link" href="https://tableless.com.br/authors/matheus-alves/">artigos</a>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
