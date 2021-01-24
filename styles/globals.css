@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@300;400&display=swap');
+
+html,
+body {
+  --margin: 40px;
+  --link-color: blue;
+  padding: 0;
+  margin: 0;
+  font-family: Martel, 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+body {
+  line-height: 1.9;
+  margin-bottom: calc(var(--margin));
+}
+
+::selection {
+  color: white;
+  background-color: var(--link-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
