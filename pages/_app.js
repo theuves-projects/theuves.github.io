@@ -1,7 +1,17 @@
 import '../styles/globals.css'
+import Header from '../components/header'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const WebSite = ({ Component, pageProps }) => (
+  <div className="main">
+    <Header />
+    <Component {...pageProps} />
+    <style jsx>{`
+        .main {
+          max-width: 620px;
+          margin: 0 auto;
+        }
+    `}</style>
+  </div>
+)
 
-export default MyApp
+export default WebSite

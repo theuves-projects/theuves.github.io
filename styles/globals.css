@@ -15,7 +15,11 @@ body {
   margin-bottom: calc(var(--margin));
 }
 
-::selection {
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
   color: white;
   background-color: var(--link-color);
 }
@@ -30,15 +34,37 @@ h6 {
   margin-bottom: 10px;
 }
 
+a {
+  color: blue;
+}
+
+a:hover {
+  color: darkblue
+}
+
 ul {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.article  {
+  background-color: white;
 }
 
-* {
-  box-sizing: border-box;
+.article code {
+  color: #c02626;
+  background-color: #f3eaea;;
+}
+
+.article pre {
+  padding: 10px 20px;
+  background-color: #eee;
+  overflow-x: auto;
+}
+
+.article pre code {
+  all: unset;
+}
+
+.article p {
+  margin-bottom: 30px;
 }
