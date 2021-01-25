@@ -5,19 +5,19 @@ export default () => (
         </a>
         <ul className="header-list">
             <li className="header-item">
-            <a className="header-link" href="/">Home</a>
+              <a className="header-link" href="/">Home</a>
             </li>
             <li className="header-item">
-            <a className="header-link" href="/portfolio">Portfolio</a>
+              <a className="header-link" href="/blog">Blog</a>
             </li>
             <li className="header-item">
-            <a className="header-link" href="/blog">Blog</a>
+              <a className="header-link" href="/portfolio">Portfolio</a>
             </li>
             <li className="header-item">
-            <a className="header-link" href="https://github.com/theuves">GitHub</a>
+              <a className="header-link" href="https://github.com/theuves">GitHub</a>
             </li>
             <li className="header-item">
-            <a className="header-link" href="https://linkedin.com/u/theuves">LinkedIn</a>
+              <a className="header-link" href="https://linkedin.com/u/theuves">LinkedIn</a>
             </li>
         </ul>
         <style jsx>{`
