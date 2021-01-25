@@ -1,13 +1,10 @@
 import fs from 'fs'
-import {useState, useEffect} from 'react'
-import {useRouter} from 'next/router'
 import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
 import matter from 'gray-matter'
 
 export default function Home({ source, frontMatter }) {
-    const router = useRouter()
-    const {post} = router.query
+    if (!source) return 'Artigo não encontrado.'
     const content = hydrate(source)
 
     return (
@@ -37,17 +34,28 @@ export default function Home({ source, frontMatter }) {
 }
 
 export const getStaticPaths = async () => {
+    const paths = fs.readdirSync('./blog')
+        .map((filename) => {
+            return '/blog/' + filename.replace('.mdx', '')
+        })
+
     return {
-        paths: [
-            '/blog/hello-world'
-        ],
+        paths: paths,
         fallback: 'blocking'
     }
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async (context) => {
     const postList = fs.readdirSync('./blog')
-    const source = fs.readFileSync('./blog/' + postList[0], 'utf-8')
+    const filename = context.params.post + '.mdx'
+
+    if (!postList.includes(filename)) {
+        return {
+            props: {}
+        }
+    }
+
+    const source = fs.readFileSync('./blog/' + filename, 'utf-8')
     const { content, data } = matter(source)
     const mdxSource = await renderToString(content, { scope: data })
 
