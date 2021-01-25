@@ -65,6 +65,28 @@ ul {
   all: unset;
 }
 
+.article a code {
+  background-color: #f0f2f3;
+  color: blue
+}
+
 .article p {
   margin-bottom: 30px;
+}
+
+.article iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.article img {
+  width: 100%;
+}
+
+.article blockquote {
+  margin: 0;
+  padding-left: 20px;
+  border-left: 8px solid #aaa;
+  color: #444;
+  font-style: italic;
 }
