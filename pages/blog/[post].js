@@ -4,7 +4,6 @@ import hydrate from 'next-mdx-remote/hydrate'
 import matter from 'gray-matter'
 
 export default function Home({ source, frontMatter }) {
-    if (!source) return 'Artigo não encontrado.'
     const content = hydrate(source)
 
     return (
@@ -46,15 +45,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context) => {
-    const postList = fs.readdirSync('./blog')
     const filename = context.params.post + '.mdx'
-
-    if (!postList.includes(filename)) {
-        return {
-            props: {}
-        }
-    }
-
     const source = fs.readFileSync('./blog/' + filename, 'utf-8')
     const { content, data } = matter(source)
     const mdxSource = await renderToString(content, { scope: data })
