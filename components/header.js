@@ -37,6 +37,9 @@ export default () => (
           color: black;
           font-weight: bold;
         }
+        .header-title:hover {
+          color: #333;
+        }
         .header-list {
           padding-left: 0;
         }
