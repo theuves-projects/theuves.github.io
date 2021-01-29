@@ -11,9 +11,11 @@ export default function Home({ source, frontMatter }) {
             <h1 className="title">
                 {frontMatter.title}
             </h1>
-            <p className="subtitle">
-                {frontMatter.subtitle}
-            </p>
+            {frontMatter.subtitle && (
+                <p className="subtitle">
+                    {frontMatter.subtitle}
+                </p>
+            )}
             <article className="article">
                 {content}
             </article>
