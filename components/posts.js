@@ -1,10 +1,12 @@
+import formatDate from '../utils/format-date'
+
 export default function Posts({ posts }) {
     return (
         <div className="last-posts">
             {posts.map(post => (
                 <div key={post.url} className="post">
                     <div className="post-date">
-                        {post.date}
+                        {formatDate(post.date)}
                     </div>
                     <div className="post-title">
                         <a className="post-link" href={post.url}>
