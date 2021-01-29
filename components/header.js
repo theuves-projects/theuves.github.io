@@ -1,4 +1,5 @@
-export default () => (
+export default function Header() {
+  return (
     <header className="header">
         <a className="header-title" href="/">
             Matheus Alves
@@ -62,3 +63,4 @@ export default () => (
       `}</style>
     </header>
 )
+}
