@@ -1,5 +1,4 @@
 import Posts from '../components/posts'
-import formatDate from '../utils/format-date'
 import getPosts from '../utils/get-posts'
 
 export default function Home({ posts }) {
