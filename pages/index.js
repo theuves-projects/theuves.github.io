@@ -1,6 +1,8 @@
 import Posts from '../components/posts'
+import formatDate from '../utils/format-date'
+import getPosts from '../utils/get-posts'
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <p className="bio">
@@ -12,7 +14,7 @@ export default function Home() {
       <h2>
         Últimos posts
       </h2>
-      <Posts />
+      <Posts posts={posts} />
       <footer className="footer">
         <p>
           Desenvolvido por @theuves com Next.js. Você pode me contatar por
@@ -33,4 +35,23 @@ export default function Home() {
       `}</style>
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  const data = []
+  const posts = getPosts()
+
+  for (let post of posts) {
+      data.push({
+          title: (await post).data.title,
+          date: formatDate((await post).data.date),
+          url: `/blog/${(await post).url}`,
+      })
+  }
+
+  return {
+      props: {
+          posts: data
+      }
+  }
 }
