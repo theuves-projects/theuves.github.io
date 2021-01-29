@@ -1,0 +1,72 @@
+---
+title: Arredondando números com JavaScript
+date: '2018-12-17'
+---
+
+O objeto `Math` do JavaScript possui vários métodos que permitem fazer a
+conversão de números decimais, como o `floor`, o `ceil` e o `round`. Logo de
+cara, observa-se que todos eles fazem o mesmo serviço: receber valores
+decimais e retornar valores inteiros. Por isso acabam confundindo algumas
+pessoas, pois eles não são as mesmas funções e, portanto, trabalham de modo
+diferente um do outro.
+
+O funcionamento básico de cada um desses métodos é bem simples: um arredonda
+para o inteiro menor, outro para o inteiro maior e outro para o inteiro mais
+próximo, respectivamente. Portanto, `Math.floor(42.6)` é `42`,
+`Math.ceil(42.6)` é `43` e `Math.round(42.6)` é `43` também. No `Math.round`,
+quando o decimal for `0.5` o número vai ser arredondado para o maior inteiro
+mais próximo.
+
+> Observe que `Math.floor(3.14)` é `3` e `Math.floor(-3.14)` é `-4`.
+
+## Tudo bem, mas e a "parseInt"?
+
+Outra função que faz algo parecido com todos esses métodos é a `parseInt` que
+em uma análise rápida se parece muito com o `Math.floor`. No entanto ela é bem
+diferente, pois foi programada para receber strings e não números. Certo, mas
+os métodos do objeto `Math` também convertem *strings* em objetos, não é? Sim,
+mas a `parseInt` possui algumas características diferentes, por exemplo, ela
+analisa somente os dígitos iniciais da *string*, onde qualquer coisa que vem
+depois deles é desconsiderado.
+
+```javascript
+parseInt('42px') // Isso retorna 42
+Math.floor('42px') // Isso retorna NaN :'-(
+```
+
+## Problemas de arredondar com "parseInt"
+
+Outra coisa interessante da função `parseInt` é que ela pode trabalhar como o
+inverso do `Number.toString`, que converte um número para determinada base
+numérica (como binário, hexadecimal, entre outros). No caso da `parseInt`, a
+base deve ser informada no segundo argumento do função, por exemplo, "2a" é a
+versão hexadecimal do número 42, então se fizermos `parseInt('2a', 16)`
+(onde `16` representa "hexadecimal") vamos obter `42`.
+
+Um problema que essa função pode apresentar é em casos em que você queira
+arredondar alguns valores que estão dentro *arrays* utilizando, por exemplo, o
+método `map`. Caso você tenha uma *array* com `42.25`, `42.5` e `42.75` e queira
+tê-los em uma nova *array* como os valores arredondados para baixo então você
+poderia tentar, fracassadamente, isso:
+
+```javascript
+[ 42.25, 42.5, 42.75 ].map(parseInt) // Cuidado! Isso retorna [42, NaN, NaN] e não [ 42, 42, 42 ]
+```
+
+Nesse caso a *callback* do método `map` entrega três parâmetros (o item, o
+índice e a própria *array*), onde nesse caso o índice do segundo argumento do
+item que está sendo processado vai entrar em conflito com a base recebida no
+segundo argumento do `parseInt`. Ou seja a *array* acima seria processada, mais
+ou menos da seguinte maneira:
+
+```javascript
+[
+  parseInt(42.25, 0), // 42.25 = item e 0 = índice
+  parseInt(42.5, 1), // 42.5 = item e 1 = índice
+  parseInt(42.75, 2) // 42.75 = item e 2 = índice
+]
+```
+
+Portanto, em casos como esses e em qualquer outro caso no qual você queira
+arredondar valores do tipo `Number`, o mais ideal seria utilizar os métodos do
+objeto `Math`, que nesse caso específico seria o `floor`.
