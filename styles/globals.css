@@ -90,3 +90,14 @@ ul {
   color: #444;
   font-style: italic;
 }
+
+.article figure {
+  margin: 0;
+}
+
+.article figure figcaption {
+  text-align: center;
+  font-style: italic;
+  color: #333;
+  font-size: 0.9em;
+}
