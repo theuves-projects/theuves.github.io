@@ -16,9 +16,11 @@ export default function Home({ posts }) {
       <Posts posts={posts} />
       <footer className="footer">
         <p>
-          Desenvolvido por @theuves com Next.js. Você pode me contatar por
-          e-mail e caso se interesse pelo código-fonte pode encontrá-lo em meu
-          GitHub.
+          Desenvolvido por <a href="https://twitter.com/theuves">@theuves</a>{' '}
+          com Next.js. Você pode me contatar por{' '}
+          <a href="mailto:theuves@gmail.com">e-mail</a> e caso se interesse
+          pelo código-fonte pode encontrá-lo em{' '}
+          <a href="https://github.com/theuves/theuves.github.io">meu GitHub</a>.
         </p>
       </footer>
       <style jsx>{`
@@ -30,6 +32,9 @@ export default function Home({ posts }) {
           margin-top: var(--margin);
           color: gray;
           font-size: 14px;
+        }
+        .footer a {
+          color: gray;
         }
       `}</style>
     </>
