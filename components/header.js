@@ -26,7 +26,7 @@ export default function Header() {
           text-align: center;
           padding: calc(var(--margin) / 2) 0;
           margin-bottom: var(--margin);
-          border-bottom: solid 2px black;
+          border-bottom: solid 1px black;
         }
         .header-title {
           margin-bottom: 0;
@@ -55,10 +55,9 @@ export default function Header() {
         }
         .header-link {
           color: black;
-          text-decoration: none;
         }
         .header-link:hover {
-          text-decoration: line-through;
+          color: #666;
         }
       `}</style>
     </header>

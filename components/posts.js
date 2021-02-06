@@ -29,7 +29,7 @@ export default function Posts({ posts }) {
                 }
                 .post-link {
                     color: var(--link-color);
-                    padding: 0 5px;
+                    padding: 2px 6px;
                     transition: linear .05s;
                     text-decoration: none;
                 }

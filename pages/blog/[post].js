@@ -8,21 +8,23 @@ export default function Home({ source, frontMatter }) {
 
     return (
         <>
+            <div className="metadata">
+                <span>
+                    Matheus Alves / {(new Date(frontMatter.date)).toLocaleDateString('pt-BR', { dateStyle: 'medium' })}
+                </span>
+            </div>
             <h1 className="title">
                 {frontMatter.title}
             </h1>
-            {frontMatter.subtitle && (
-                <p className="subtitle">
-                    {frontMatter.subtitle}
-                </p>
-            )}
             <article className="article">
                 {content}
             </article>
             <style jsx>{`
-                .subtitle {
+                .metadata {
+                    color: #333;
                     font-style: italic;
-                    color: gray;
+                    text-align: right;
+                    font-size: 14px;
                 }
                 .author {
                     color: #333;

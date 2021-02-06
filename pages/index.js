@@ -8,7 +8,7 @@ export default function Home({ posts }) {
         Arquiteto de Soluções no{' '}
         <a href="https://grupomytec.com.br">Grupo Mytec</a>{' '}
         focado em AWS, desenvolvedor JavaScript trabalhando em projetos
-        independentes e mantenedor de projetos open source como PortuJS.
+        independentes e mantenedor de projetos open source como o PortuJS.
       </p>
       <h2>
         Últimos posts
@@ -19,7 +19,7 @@ export default function Home({ posts }) {
           Desenvolvido por <a href="https://twitter.com/theuves">@theuves</a>{' '}
           com Next.js. Você pode me contatar por{' '}
           <a href="mailto:theuves@gmail.com">e-mail</a> e caso se interesse
-          pelo código-fonte pode encontrá-lo em{' '}
+          pelo código-fonte pode encontrá-lo no{' '}
           <a href="https://github.com/theuves/theuves.github.io">meu GitHub</a>.
         </p>
       </footer>

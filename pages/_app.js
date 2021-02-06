@@ -7,7 +7,7 @@ const WebSite = ({ Component, pageProps }) => (
     <Component {...pageProps} />
     <style jsx>{`
         .main {
-          max-width: 620px;
+          max-width: 600px;
           margin: 0 auto;
         }
     `}</style>
