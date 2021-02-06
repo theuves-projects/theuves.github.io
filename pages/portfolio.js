@@ -1,4 +1,4 @@
-function Card({name, link='#', image, children}) {
+function Card({ name, link = '#', image, children }) {
     return (
         <div>
             <h2>{name}</h2>

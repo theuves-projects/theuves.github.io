@@ -25,7 +25,24 @@ export default function Home({ posts }) {
       </footer>
       <style jsx>{`
         .bio {
+          position: relative;
           margin-bottom: var(--margin);
+          padding-left: 50px;
+          font-style: italic;
+          color: #333;
+        }
+        .bio::before {
+          content: '"';
+          position: absolute;
+          left: 0;
+          top: -10%;
+          font-size: 6em;
+          margin: 0;
+          padding: 0;
+          line-height: 100%;
+          font-family: serif;
+          color: #ddd;
+          z-index: -1;
         }
         .footer {
           border-top: solid 1px #666;
@@ -46,11 +63,11 @@ export const getStaticProps = async () => {
   const posts = getPosts()
 
   for (let post of posts) {
-      data.push({
-          title: (await post).data.title,
-          date: (await post).data.date,
-          url: `/blog/${(await post).url}`,
-      })
+    data.push({
+      title: (await post).data.title,
+      date: (await post).data.date,
+      url: `/blog/${(await post).url}`,
+    })
   }
 
   data = data.sort((a, b) => {
@@ -63,8 +80,8 @@ export const getStaticProps = async () => {
   })
 
   return {
-      props: {
-          posts: data
-      }
+    props: {
+      posts: data
+    }
   }
 }

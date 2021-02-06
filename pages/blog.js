@@ -2,7 +2,12 @@ import Posts from '../components/posts'
 import getPosts from '../utils/get-posts'
 
 export default function Blog({ posts }) {
-    return <Posts posts={posts} />
+    return (
+        <>
+            <h1>Blog</h1>
+            <Posts posts={posts} />
+        </>
+    )
 }
 
 export const getStaticProps = async () => {

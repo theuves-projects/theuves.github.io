@@ -1,27 +1,27 @@
 export default function Header() {
   return (
     <header className="header">
-        <a className="header-title" href="/">
-            Matheus Alves
+      <a className="header-title" href="/">
+        Matheus Alves
         </a>
-        <ul className="header-list">
-            <li className="header-item">
-              <a className="header-link" href="/">Home</a>
-            </li>
-            <li className="header-item">
-              <a className="header-link" href="/blog">Blog</a>
-            </li>
-            <li className="header-item">
-              <a className="header-link" href="/portfolio">Portfolio</a>
-            </li>
-            <li className="header-item">
-              <a className="header-link" href="https://github.com/theuves">GitHub</a>
-            </li>
-            <li className="header-item">
-              <a className="header-link" href="https://linkedin.com/u/theuves">LinkedIn</a>
-            </li>
-        </ul>
-        <style jsx>{`
+      <ul className="header-list">
+        <li className="header-item">
+          <a className="header-link" href="/">Home</a>
+        </li>
+        <li className="header-item">
+          <a className="header-link" href="/blog">Blog</a>
+        </li>
+        <li className="header-item">
+          <a className="header-link" href="/portfolio">Portfolio</a>
+        </li>
+        <li className="header-item">
+          <a className="header-link" href="https://github.com/theuves">GitHub</a>
+        </li>
+        <li className="header-item">
+          <a className="header-link" href="https://linkedin.com/u/theuves">LinkedIn</a>
+        </li>
+      </ul>
+      <style jsx>{`
         .header {
           text-align: center;
           padding: calc(var(--margin) / 2) 0;
@@ -31,9 +31,8 @@ export default function Header() {
         .header-title {
           margin-bottom: 0;
           display: inline-block;
-          font-size: 2.5em;
+          font-size: 2em;
           line-height: 175%;
-          text-transform: lowercase;
           text-decoration: none;
           color: black;
           font-weight: bold;
@@ -54,6 +53,9 @@ export default function Header() {
           margin-right: 10px;
         }
         .header-link {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: .9em;
           color: black;
         }
         .header-link:hover {
@@ -61,5 +63,5 @@ export default function Header() {
         }
       `}</style>
     </header>
-)
+  )
 }

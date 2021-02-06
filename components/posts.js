@@ -5,10 +5,10 @@ export default function Posts({ posts }) {
         <div className="last-posts">
             {posts.map(post => (
                 <div key={post.url} className="post">
-                    <div className="post-date">
-                        {formatDate(post.date)}
-                    </div>
                     <div className="post-title">
+                        <span className="post-date">
+                            {formatDate(post.date)}
+                        </span>
                         <a className="post-link" href={post.url}>
                             {post.title}
                         </a>
@@ -21,8 +21,13 @@ export default function Posts({ posts }) {
                     margin-bottom: 5px;
                 }
                 .post-date {
-                    width: 130px;
-                    color: #666;
+                    background-color: #4caf50;
+                    color: #eee;
+                    padding: 2px 6px;
+                    border-radius: 3px;
+                    font-size: .9em;
+                    font-family: monospace;
+                    margin-right: 15px;
                 }
                 .post-title {
                     flex: 1;
