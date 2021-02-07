@@ -35,6 +35,7 @@ export default function Header() {
           font-size: 2em;
           line-height: 175%;
           text-decoration: none;
+          text-transform: lowercase;
           color: black;
           font-weight: bold;
         }
