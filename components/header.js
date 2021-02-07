@@ -12,12 +12,12 @@ export default function Header() {
           <a className="header-link" href="/projects">Projetos</a>
         </li>
         <li className="header-item">
-          <a className="header-link" href="https://github.com/theuves">
+          <a className="header-link" target="_blank" href="https://github.com/theuves">
             GitHub <img className="header-external" src="/external-link.svg" />
           </a>
         </li>
         <li className="header-item">
-          <a className="header-link" href="https://www.linkedin.com/in/theuves/">
+          <a className="header-link" target="_blank" href="https://www.linkedin.com/in/theuves/">
             LinkedIn <img className="header-external" src="/external-link.svg" />
           </a>
         </li>
