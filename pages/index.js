@@ -4,12 +4,18 @@ import getPosts from '../utils/get-posts'
 export default function Home({ posts }) {
   return (
     <>
-      <p className="bio">
-        Arquiteto de Soluções no{' '}
-        <a href="https://grupomytec.com.br">Grupo Mytec</a>{' '}
-        focado em AWS, desenvolvedor JavaScript trabalhando em projetos
-        independentes e mantenedor de projetos open source como o PortuJS.
-      </p>
+      <div className="bio">
+        <div className="bio-text">
+          Arquiteto de Soluções no{' '}
+          <a href="https://grupomytec.com.br">Grupo Mytec</a>{' '}
+          focado em AWS, desenvolvedor JavaScript trabalhando em projetos
+          independentes e mantenedor de projetos open source como o{' '}
+          <a href="https://github.com/theuves">PortuJS</a>.
+        </div>
+        <div className="bio-image">
+          <img src="https://avatars.githubusercontent.com/u/10136242?s=400" className="bio-image-src" />
+        </div>
+      </div>
       <h2>
         Últimos posts
       </h2>
@@ -25,24 +31,21 @@ export default function Home({ posts }) {
       </footer>
       <style jsx>{`
         .bio {
-          position: relative;
-          margin-bottom: var(--margin);
-          padding-left: 50px;
+          display: flex;
+          margin-bottom: 20px;
+        }
+        .bio-image {
+          width: 128px;
+        }
+        .bio-image-src {
+          width: 100%;
+          border-radius: 100%;
+        }
+        .bio-text {
+          flex: 1;
+          padding-right: 80px;
           font-style: italic;
           color: #333;
-        }
-        .bio::before {
-          content: '"';
-          position: absolute;
-          left: 0;
-          top: -10%;
-          font-size: 6em;
-          margin: 0;
-          padding: 0;
-          line-height: 100%;
-          font-family: serif;
-          color: #ddd;
-          z-index: -1;
         }
         .footer {
           border-top: solid 1px #666;

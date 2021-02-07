@@ -3,6 +3,9 @@ import Header from '../components/header'
 
 const WebSite = ({ Component, pageProps }) => (
   <>
+    <title>
+      Matheus Alves (@theuves)
+    </title>
     <Header />
     <div className="main">
       <Component {...pageProps} />

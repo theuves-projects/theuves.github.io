@@ -30,7 +30,7 @@ export default function Home({ source, frontMatter }) {
                     color: #333;
                     text-align: right;
                     font-size: 14px;
-                }    
+                }
             `}</style>
         </>
     )
@@ -44,7 +44,7 @@ export const getStaticPaths = async () => {
 
     return {
         paths: paths,
-        fallback: 'blocking'
+        fallback: false
     }
 }
 

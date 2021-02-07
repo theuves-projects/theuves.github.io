@@ -6,19 +6,20 @@ export default function Header() {
         </a>
       <ul className="header-list">
         <li className="header-item">
-          <a className="header-link" href="/">Home</a>
+          <a className="header-link" href="/">Início</a>
         </li>
         <li className="header-item">
-          <a className="header-link" href="/blog">Blog</a>
+          <a className="header-link" href="/projects">Projetos</a>
         </li>
         <li className="header-item">
-          <a className="header-link" href="/portfolio">Portfolio</a>
+          <a className="header-link" href="https://github.com/theuves">
+            GitHub <img className="header-external" src="/external-link.svg" />
+          </a>
         </li>
         <li className="header-item">
-          <a className="header-link" href="https://github.com/theuves">GitHub</a>
-        </li>
-        <li className="header-item">
-          <a className="header-link" href="https://linkedin.com/u/theuves">LinkedIn</a>
+          <a className="header-link" href="https://www.linkedin.com/in/theuves/">
+            LinkedIn <img className="header-external" src="/external-link.svg" />
+          </a>
         </li>
       </ul>
       <style jsx>{`
@@ -57,6 +58,10 @@ export default function Header() {
           text-decoration: none;
           font-size: .9em;
           color: black;
+        }
+        .header-external {
+          width: .8em;
+          color: #666;
         }
         .header-link:hover {
           color: #666;

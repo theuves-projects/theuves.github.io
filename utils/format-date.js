@@ -12,5 +12,5 @@ export default function formatDate(dateString) {
     const day = fillNumber(date.toLocaleDateString('pt-BR', { day: 'numeric' }))
     const year = date.toLocaleDateString('pt-BR', { year: 'numeric' })
 
-    return `${month} ${day}, ${year}`
+    return `${day} ${month} ${year}`
 }
