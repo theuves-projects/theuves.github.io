@@ -62,6 +62,9 @@ export default function Home({ posts }) {
           }
         }
         @media (max-width: 470px) {
+          .footer {
+            margin-top: 20px;
+          }
           .bio-text {
             padding-right: 0;
           }

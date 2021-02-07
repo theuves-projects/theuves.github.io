@@ -1,9 +1,9 @@
 export default function Header() {
   return (
     <header className="header">
-      <a className="header-title" href="/">
+      <span className="header-title">
         Matheus Alves
-        </a>
+      </span>
       <ul className="header-list">
         <li className="header-item">
           <a className="header-link" href="/">Início</a>
@@ -34,13 +34,9 @@ export default function Header() {
           display: inline-block;
           font-size: 2em;
           line-height: 175%;
-          text-decoration: none;
           text-transform: lowercase;
           color: black;
           font-weight: bold;
-        }
-        .header-title:hover {
-          color: #333;
         }
         .header-list {
           padding-left: 0;
@@ -66,6 +62,22 @@ export default function Header() {
         }
         .header-link:hover {
           color: #666;
+        }
+        @media (max-width: 620px) {
+          .header {
+            padding: 0 0 5px 0;
+            margin-bottom: 20px;
+            border-bottom: none;
+          }
+          .header-title {
+            font-size: 2.5em;
+          }
+          .header-item:not(:first-child) {
+            margin-left: 5px;
+          }
+          .header-item:not(:last-child) {
+            margin-right: 5px;
+          }
         }
       `}</style>
     </header>

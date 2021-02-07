@@ -15,6 +15,11 @@ const WebSite = ({ Component, pageProps }) => (
           margin: 0 auto;
           max-width: 620px;
         }
+        @media (max-width: 470px) {
+          .main {
+            padding: 0 15px;
+          }
+        }
     `}</style>
     </div>
   </>

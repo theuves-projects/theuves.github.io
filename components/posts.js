@@ -21,13 +21,13 @@ export default function Posts({ posts }) {
                     margin-bottom: 5px;
                 }
                 .post-date {
-                    background-color: #4caf50;
-                    color: #eee;
                     padding: 2px 6px;
+                    margin-right: 15px;
                     border-radius: 3px;
                     font-size: .9em;
                     font-family: monospace;
-                    margin-right: 15px;
+                    color: #eee;
+                    background-color: #4caf50;
                 }
                 .post-title {
                     flex: 1;
@@ -43,6 +43,22 @@ export default function Posts({ posts }) {
                 }
                 .post-link:active {
                     background-color: #ddd;
+                }
+                @media (max-width: 620px) {
+                    .post-date {
+                        margin-right: 0px;
+                        display: block;
+                        font-style: italic;
+                        background-color: transparent;
+                        color: gray;
+                    }
+                    .post-link {
+                        padding: 0;
+                    }
+                    .post-link:hover,
+                    .post-link:active {
+                        background-color: transparent;
+                    }
                 }
             `}</style>
         </div>
