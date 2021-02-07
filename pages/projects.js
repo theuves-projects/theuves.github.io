@@ -54,7 +54,7 @@ const Card = ({
                     width: 200px;
                     padding-top: 10px;
                     box-shadow: 0 0 10px 0px #999;
-                    border: solid #ddd;
+                    border: solid #555;
                     border-width: 10px 5px;
                     border-radius: 25px;
                     background-color: ${mobileColor};
@@ -68,7 +68,7 @@ const Card = ({
                     display: inline-block;
                     width: 40%;
                     height: 8px;
-                    background-color: #ddd;
+                    background-color: #555;
                     position: absolute;
                     top: 0;
                     left: 50%;
