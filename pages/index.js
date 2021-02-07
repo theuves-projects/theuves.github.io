@@ -56,6 +56,19 @@ export default function Home({ posts }) {
         .footer a {
           color: gray;
         }
+        @media (max-width: 620px) {
+          .bio-text {
+            padding-right: 40px;
+          }
+        }
+        @media (max-width: 470px) {
+          .bio-text {
+            padding-right: 0;
+          }
+          .bio-image {
+            display: none;
+          }
+        }
       `}</style>
     </>
   )
