@@ -9,7 +9,7 @@ export default function Header() {
           <a className="header-link" href="/">Início</a>
         </li>
         <li className="header-item">
-          <a className="header-link" href="/projects">Projetos</a>
+          <a className="header-link" href="/portfolio">Portfólio</a>
         </li>
         <li className="header-item">
           <a className="header-link" target="_blank" href="https://github.com/theuves">
@@ -32,8 +32,9 @@ export default function Header() {
         .header-title {
           margin-bottom: 0;
           display: inline-block;
-          font-size: 2em;
-          line-height: 175%;
+          font-size: 3.3em;
+          line-height: 100%;
+          margin-bottom: 5px;
           text-transform: lowercase;
           color: black;
           font-weight: bold;

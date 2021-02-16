@@ -1,66 +1,74 @@
-import formatDate from '../utils/format-date'
+import cheerio from 'cheerio'
+import hydrate from 'next-mdx-remote/hydrate'
 
 export default function Posts({ posts }) {
     return (
         <div className="last-posts">
-            {posts.map(post => (
-                <div key={post.url} className="post">
-                    <div className="post-title">
-                        <span className="post-date">
-                            {formatDate(post.date)}
-                        </span>
-                        <a className="post-link" href={post.url}>
-                            {post.title}
+            {posts.map(({ title, date, url, mdxSource }) => (
+                <article className="article" key={title}>
+                    <h3 className="title">
+                        <a className="title-link" href={url}>
+                            {title}
                         </a>
+                    </h3>
+                    <div className="date">
+                        Publicado em {formatDate(date)}
                     </div>
-                </div>
+                    <div
+                        className="preview"
+                        dangerouslySetInnerHTML={{
+                            __html: getFirstParagraph(mdxSource)
+                        }}
+                    />
+                </article>
             ))}
             <style jsx>{`
-                .post {
+                .article {
+                    margin-bottom: 30px;
+                }
+                .title {
+                    margin-bottom: 0;
+                    font-size: 1.5em;
+                    font-weight: lighter;
+                }
+                .title-link {
+                    color: #364496;
+                }
+                .title-link:hover {
+                    opacity: .8;
+                }
+                .date {
+                    margin-bottom: 10px;
+                    color: gray
+                }
+                .preview {
+                    font-style: italic;
+                    color: #333;
+                }
+                .footer {
                     display: flex;
-                    margin-bottom: 5px;
-                }
-                .post-date {
-                    padding: 2px 6px;
-                    margin-right: 15px;
-                    border-radius: 3px;
-                    font-size: .9em;
-                    font-family: monospace;
-                    color: #eee;
-                    background-color: #4caf50;
-                }
-                .post-title {
-                    flex: 1;
-                }
-                .post-link {
-                    color: var(--link-color);
-                    padding: 2px 6px;
-                    transition: linear .05s;
-                    text-decoration: none;
-                }
-                .post-link:hover {
-                    background-color: #eee;
-                }
-                .post-link:active {
-                    background-color: #ddd;
-                }
-                @media (max-width: 620px) {
-                    .post-date {
-                        margin-right: 0px;
-                        display: block;
-                        font-style: italic;
-                        background-color: transparent;
-                        color: gray;
-                    }
-                    .post-link {
-                        padding: 0;
-                    }
-                    .post-link:hover,
-                    .post-link:active {
-                        background-color: transparent;
-                    }
                 }
             `}</style>
         </div>
     )
+}
+
+function formatDate(date) {
+    const dt = new Date(date)
+    return dt.toLocaleDateString('pt-BR', {
+        dateStyle: 'long'
+    })
+}
+
+function getFirstParagraph(mdxSource) {
+    const renderedHTML = mdxSource.renderedOutput
+    const $ = cheerio.load(renderedHTML)
+    const p1 = $('p:nth-child(1)').text()
+    const p2 = $('p:nth-child(2)').text()
+    const preview = [p1.split(' '), p2.split(' ')]
+        .flat()
+        .slice(0, 40)
+        .join(' ')
+        .replace(/[,]$/, '') + '...'
+    return preview
 }

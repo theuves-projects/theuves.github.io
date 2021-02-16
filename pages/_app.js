@@ -13,7 +13,7 @@ const WebSite = ({ Component, pageProps }) => (
         .main {
           padding: 0 10px;
           margin: 0 auto;
-          max-width: 620px;
+          max-width: 700px;
         }
         @media (max-width: 470px) {
           .main {
