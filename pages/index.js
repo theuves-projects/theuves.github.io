@@ -39,7 +39,7 @@ export default function Home({ posts }) {
         .bio-text {
           flex: 1;
           font-size: 1em;
-          padding-right: 60px;
+          padding-right: 75px;
           color: #333;
         }
         .subtitle {
